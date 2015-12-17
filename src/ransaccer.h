@@ -38,6 +38,7 @@ private:
     void reset(void);
     void find_marker(void);
 public:
+    Ransac(void);
     void assign(Mat);
     void assign(String);
     Point extract(void);

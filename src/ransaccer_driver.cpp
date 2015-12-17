@@ -10,7 +10,7 @@ using namespace cv;
 int main() {
     Point center;
     Mat image = imread("../src/marker_corny/marker_corny_01.png", CV_LOAD_IMAGE_COLOR);
-    ransaccer rs;
+    Ransac rs;
     rs.assign(image);
     center = rs.extract();
     cout << center << endl;

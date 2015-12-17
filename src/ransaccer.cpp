@@ -10,44 +10,44 @@
 using namespace std;
 using namespace cv;
 
-ransaccer::ransaccer()
+Ransac::Ransac(void)
 {
     _img_object = imread("../src/Corny.png", CV_LOAD_IMAGE_COLOR);
     _min_hessian = 400;
     _max_dist = 0;
     _min_dist = 100;
-    _object_corners.resize(4, 0);
-    _scene_corners.resize(4, 0);
-    _x = 0;
-    _y = 0;
+    _obj_corners.resize(4);
+    _scene_corners.resize(4);
+    _center.x = 0;
+    _center.y = 0;
 }
 
-void ransaccer::reset(void)
+void Ransac::reset(void)
 {
     _max_dist = 0;
     _min_dist = 100;
-    _object_corners.clear();
+    _obj_corners.clear();
     _scene_corners.clear();
-    _x = 0;
-    _y = 0;
+    _center.x = 0;
+    _center.y = 0;
 }
-void ransaccer::assign(Mat img)
+void Ransac::assign(Mat img)
 {
     _img_scene = img.clone();
-    ransaccer::find_marker();
+    Ransac::find_marker();
 }
 
-void ransaccer::assign(String name)
+void Ransac::assign(String name)
 {
     _img_scene = imread(name, CV_LOAD_IMAGE_COLOR);
-    ransaccer::find_marker();
+    Ransac::find_marker();
 }
-Point ransaccer::extract(void)
+Point Ransac::extract(void)
 {
     return _center;
 }
 
-void find_marker(void)
+void Ransac::find_marker(void)
 {
     SurfFeatureDetector detector(_min_hessian);
     detector.detect(_img_object, _keypoints_object);
@@ -65,7 +65,7 @@ void find_marker(void)
         }
     }
 
-    for (int i{0}; i < descriptors_object.rows; i++) {
+    for (int i{0}; i < _descriptors_object.rows; i++) {
         if (_matches[i].distance < 3 * _min_dist) {
             _good_matches.push_back(_matches[i]);
         }
