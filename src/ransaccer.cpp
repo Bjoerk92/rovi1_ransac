@@ -63,10 +63,10 @@ void ransaccer::assign(Mat img)
 	perspectiveTransform(_obj_corners, _scene_corners, _H);
 
     #ifdef DEBUG
-    line( img_matches, scene_corners[0] + Point2f( img_object.cols, 0), scene_corners[1] + Point2f( img_object.cols, 0), Scalar(0, 255, 0), 4 );
-	line( img_matches, scene_corners[1] + Point2f( img_object.cols, 0), scene_corners[2] + Point2f( img_object.cols, 0), Scalar( 0, 255, 0), 4 );
-	line( img_matches, scene_corners[2] + Point2f( img_object.cols, 0), scene_corners[3] + Point2f( img_object.cols, 0), Scalar( 0, 255, 0), 4 );
-	line( img_matches, scene_corners[3] + Point2f( img_object.cols, 0), scene_corners[0] + Point2f( img_object.cols, 0), Scalar( 0, 255, 0), 4 );
+    line(_img_matches, _scene_corners[0] + Point2f(_img_object.cols, 0), _scene_corners[1] + Point2f(_img_object.cols, 0), Scalar(0, 255, 0), 4);
+	line(_img_matches, _scene_corners[1] + Point2f(_img_object.cols, 0), _scene_corners[2] + Point2f(_img_object.cols, 0), Scalar(0, 255, 0), 4);
+	line(_img_matches, _scene_corners[2] + Point2f(_img_object.cols, 0), _scene_corners[3] + Point2f(_img_object.cols, 0), Scalar(0, 255, 0), 4);
+	line(_img_matches, _scene_corners[3] + Point2f(_img_object.cols, 0), _scene_corners[0] + Point2f(_img_object.cols, 0), Scalar(0, 255, 0), 4);
 	#endif
 }
 
