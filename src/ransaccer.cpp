@@ -12,7 +12,7 @@ using namespace cv;
 
 ransaccer::ransaccer()
 {
-    _img_object = imread("../src/Corny.png", 1);
+    _img_object = imread("../src/Corny.png", CV_LOAD_IMAGE_COLOR);
     _min_hessian = 400;
     _max_dist = 0;
     _min_dist = 100;
