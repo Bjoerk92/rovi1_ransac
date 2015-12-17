@@ -6,4 +6,3 @@ find_package(OpenCV REQUIRED)
 add_executable(Ransac Ransac.cpp)
 
 target_link_libraries(Ransac ${OpenCV_LIBS})
-
