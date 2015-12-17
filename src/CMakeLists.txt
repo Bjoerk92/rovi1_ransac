@@ -3,6 +3,6 @@ project(Ransac)
 
 find_package(OpenCV REQUIRED)
 
-add_executable(Ransac Ransac.cpp)
+add_executable(Ransac ransaccer_driver.cpp ransaccer.cpp)
 
 target_link_libraries(Ransac ${OpenCV_LIBS})
