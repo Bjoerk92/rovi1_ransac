@@ -108,9 +108,31 @@ int main()
 	line( img_matches, scene_corners[1] + Point2f( img_object.cols, 0), scene_corners[2] + Point2f( img_object.cols, 0), Scalar( 0, 255, 0), 4 );
 	line( img_matches, scene_corners[2] + Point2f( img_object.cols, 0), scene_corners[3] + Point2f( img_object.cols, 0), Scalar( 0, 255, 0), 4 );
 	line( img_matches, scene_corners[3] + Point2f( img_object.cols, 0), scene_corners[0] + Point2f( img_object.cols, 0), Scalar( 0, 255, 0), 4 );
+	
+	//-- find the center of the image (scene)
+	
+	double x_center = 0;
+	double y_center = 0; 
+	
+	for( int i = 0; i < 4; i++)
+	{
+		x_center = x_center + scene_corners[i].x;
+		y_center = y_center + scene_corners[i].y;
+	}
+	
+	// del med 4 for at finde gennemsnittet
+	x_center = x_center/4; 
+	y_center = y_center/4;
+	
+	cout << "x " << x_center << " y " << y_center << endl; 
+	
+	circle(img_scene, Point(x_center,y_center) , 4, Scalar(0,255,0), 5);
+	
+	imshow( "Center of image", img_scene )
 
 	//-- Show detected matches
 	imshow( "Good Matches & Object detection", img_matches );
+	
 	
 	waitKey(0);
 	return 0;
