@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <iostream>
+#include <string>
 #include "opencv2/core/core.hpp"
 #include "opencv2/features2d/features2d.hpp"
 #include "opencv2/highgui/highgui.hpp"
@@ -15,6 +16,7 @@ using namespace cv;
 class Ransac {
 private:
     int _min_hessian;
+    Point _center;
     double _max_dist;
     double _min_dist;
     Mat _img_object;
@@ -33,10 +35,12 @@ private:
     FlannBasedMatcher _matcher;
 	vector<DMatch> _matches;
     vector<DMatch> _good_matches;
+    void reset(void);
     void find_marker(void);
 public:
     void assign(Mat);
-    Point extract();
+    void assign(String);
+    Point extract(void);
 
 };
 
