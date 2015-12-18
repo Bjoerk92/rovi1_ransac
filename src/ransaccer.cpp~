@@ -55,10 +55,6 @@ void find_basic_object(void)
     SurfFeatureDetector detector(_min_hessian);
     detector.detect(_img_object, _keypoints_object);
     _extractor.compute(_img_object, _keypoints_object, _descriptors_object);
-    _obj_corners[0] = cvPoint(0,0);
-    _obj_corners[1] = cvPoint(_img_object.cols, 0);
-    _obj_corners[2] = cvPoint(_img_object.cols, _img_object.rows);
-    _obj_corners[3] = cvPoint(0, _img_object.rows);
 }
 
 void Ransac::find_marker(void)
@@ -94,6 +90,10 @@ void Ransac::find_marker(void)
     }
 
     _H = findHomography(_obj, _scene, CV_RANSAC);
+    _obj_corners[0] = cvPoint(0,0);
+    _obj_corners[1] = cvPoint(_img_object.cols, 0);
+    _obj_corners[2] = cvPoint(_img_object.cols, _img_object.rows);
+    _obj_corners[3] = cvPoint(0, _img_object.rows);
     perspectiveTransform(_obj_corners, _scene_corners, _H);
 
     #ifdef DEBUG
