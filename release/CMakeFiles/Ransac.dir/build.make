@@ -49,28 +49,28 @@ include CMakeFiles/Ransac.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Ransac.dir/flags.make
 
-CMakeFiles/Ransac.dir/ransaccer_driver.cpp.o: CMakeFiles/Ransac.dir/flags.make
-CMakeFiles/Ransac.dir/ransaccer_driver.cpp.o: /home/alrekr/workspace/git/rovi1_ransac/src/ransaccer_driver.cpp
+CMakeFiles/Ransac.dir/main.cpp.o: CMakeFiles/Ransac.dir/flags.make
+CMakeFiles/Ransac.dir/main.cpp.o: /home/alrekr/workspace/git/rovi1_ransac/src/main.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/alrekr/workspace/git/rovi1_ransac/release/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Ransac.dir/ransaccer_driver.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Ransac.dir/ransaccer_driver.cpp.o -c /home/alrekr/workspace/git/rovi1_ransac/src/ransaccer_driver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Ransac.dir/main.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Ransac.dir/main.cpp.o -c /home/alrekr/workspace/git/rovi1_ransac/src/main.cpp
 
-CMakeFiles/Ransac.dir/ransaccer_driver.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ransac.dir/ransaccer_driver.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/alrekr/workspace/git/rovi1_ransac/src/ransaccer_driver.cpp > CMakeFiles/Ransac.dir/ransaccer_driver.cpp.i
+CMakeFiles/Ransac.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ransac.dir/main.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/alrekr/workspace/git/rovi1_ransac/src/main.cpp > CMakeFiles/Ransac.dir/main.cpp.i
 
-CMakeFiles/Ransac.dir/ransaccer_driver.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ransac.dir/ransaccer_driver.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/alrekr/workspace/git/rovi1_ransac/src/ransaccer_driver.cpp -o CMakeFiles/Ransac.dir/ransaccer_driver.cpp.s
+CMakeFiles/Ransac.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ransac.dir/main.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/alrekr/workspace/git/rovi1_ransac/src/main.cpp -o CMakeFiles/Ransac.dir/main.cpp.s
 
-CMakeFiles/Ransac.dir/ransaccer_driver.cpp.o.requires:
-.PHONY : CMakeFiles/Ransac.dir/ransaccer_driver.cpp.o.requires
+CMakeFiles/Ransac.dir/main.cpp.o.requires:
+.PHONY : CMakeFiles/Ransac.dir/main.cpp.o.requires
 
-CMakeFiles/Ransac.dir/ransaccer_driver.cpp.o.provides: CMakeFiles/Ransac.dir/ransaccer_driver.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Ransac.dir/build.make CMakeFiles/Ransac.dir/ransaccer_driver.cpp.o.provides.build
-.PHONY : CMakeFiles/Ransac.dir/ransaccer_driver.cpp.o.provides
+CMakeFiles/Ransac.dir/main.cpp.o.provides: CMakeFiles/Ransac.dir/main.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Ransac.dir/build.make CMakeFiles/Ransac.dir/main.cpp.o.provides.build
+.PHONY : CMakeFiles/Ransac.dir/main.cpp.o.provides
 
-CMakeFiles/Ransac.dir/ransaccer_driver.cpp.o.provides.build: CMakeFiles/Ransac.dir/ransaccer_driver.cpp.o
+CMakeFiles/Ransac.dir/main.cpp.o.provides.build: CMakeFiles/Ransac.dir/main.cpp.o
 
 CMakeFiles/Ransac.dir/ransaccer.cpp.o: CMakeFiles/Ransac.dir/flags.make
 CMakeFiles/Ransac.dir/ransaccer.cpp.o: /home/alrekr/workspace/git/rovi1_ransac/src/ransaccer.cpp
@@ -97,13 +97,13 @@ CMakeFiles/Ransac.dir/ransaccer.cpp.o.provides.build: CMakeFiles/Ransac.dir/rans
 
 # Object files for target Ransac
 Ransac_OBJECTS = \
-"CMakeFiles/Ransac.dir/ransaccer_driver.cpp.o" \
+"CMakeFiles/Ransac.dir/main.cpp.o" \
 "CMakeFiles/Ransac.dir/ransaccer.cpp.o"
 
 # External object files for target Ransac
 Ransac_EXTERNAL_OBJECTS =
 
-Ransac: CMakeFiles/Ransac.dir/ransaccer_driver.cpp.o
+Ransac: CMakeFiles/Ransac.dir/main.cpp.o
 Ransac: CMakeFiles/Ransac.dir/ransaccer.cpp.o
 Ransac: CMakeFiles/Ransac.dir/build.make
 Ransac: /usr/lib/x86_64-linux-gnu/libopencv_videostab.so.2.4.8
@@ -133,7 +133,7 @@ Ransac: CMakeFiles/Ransac.dir/link.txt
 CMakeFiles/Ransac.dir/build: Ransac
 .PHONY : CMakeFiles/Ransac.dir/build
 
-CMakeFiles/Ransac.dir/requires: CMakeFiles/Ransac.dir/ransaccer_driver.cpp.o.requires
+CMakeFiles/Ransac.dir/requires: CMakeFiles/Ransac.dir/main.cpp.o.requires
 CMakeFiles/Ransac.dir/requires: CMakeFiles/Ransac.dir/ransaccer.cpp.o.requires
 .PHONY : CMakeFiles/Ransac.dir/requires
 

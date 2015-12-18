@@ -6,6 +6,22 @@
 
 #IncludeRegexTransform: 
 
+/home/alrekr/workspace/git/rovi1_ransac/src/main.cpp
+ransaccer.h
+/home/alrekr/workspace/git/rovi1_ransac/src/ransaccer.h
+iostream
+-
+chrono
+-
+string
+-
+opencv2/core/core.hpp
+-
+opencv2/imgproc/imgproc.hpp
+-
+opencv2/highgui/highgui.hpp
+-
+
 /home/alrekr/workspace/git/rovi1_ransac/src/ransaccer.cpp
 ransaccer.h
 /home/alrekr/workspace/git/rovi1_ransac/src/ransaccer.h
@@ -41,16 +57,4 @@ opencv2/calib3d/calib3d.hpp
 /home/alrekr/workspace/git/rovi1_ransac/src/opencv2/calib3d/calib3d.hpp
 opencv2/nonfree/nonfree.hpp
 /home/alrekr/workspace/git/rovi1_ransac/src/opencv2/nonfree/nonfree.hpp
-
-/home/alrekr/workspace/git/rovi1_ransac/src/ransaccer_driver.cpp
-ransaccer.h
-/home/alrekr/workspace/git/rovi1_ransac/src/ransaccer.h
-iostream
--
-opencv2/core/core.hpp
--
-opencv2/imgproc/imgproc.hpp
--
-opencv2/highgui/highgui.hpp
--
 

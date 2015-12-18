@@ -114,6 +114,30 @@ Ransac/fast:
 	$(MAKE) -f CMakeFiles/Ransac.dir/build.make CMakeFiles/Ransac.dir/build
 .PHONY : Ransac/fast
 
+main.o: main.cpp.o
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/Ransac.dir/build.make CMakeFiles/Ransac.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/Ransac.dir/build.make CMakeFiles/Ransac.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/Ransac.dir/build.make CMakeFiles/Ransac.dir/main.cpp.s
+.PHONY : main.cpp.s
+
 ransaccer.o: ransaccer.cpp.o
 .PHONY : ransaccer.o
 
@@ -138,30 +162,6 @@ ransaccer.cpp.s:
 	$(MAKE) -f CMakeFiles/Ransac.dir/build.make CMakeFiles/Ransac.dir/ransaccer.cpp.s
 .PHONY : ransaccer.cpp.s
 
-ransaccer_driver.o: ransaccer_driver.cpp.o
-.PHONY : ransaccer_driver.o
-
-# target to build an object file
-ransaccer_driver.cpp.o:
-	$(MAKE) -f CMakeFiles/Ransac.dir/build.make CMakeFiles/Ransac.dir/ransaccer_driver.cpp.o
-.PHONY : ransaccer_driver.cpp.o
-
-ransaccer_driver.i: ransaccer_driver.cpp.i
-.PHONY : ransaccer_driver.i
-
-# target to preprocess a source file
-ransaccer_driver.cpp.i:
-	$(MAKE) -f CMakeFiles/Ransac.dir/build.make CMakeFiles/Ransac.dir/ransaccer_driver.cpp.i
-.PHONY : ransaccer_driver.cpp.i
-
-ransaccer_driver.s: ransaccer_driver.cpp.s
-.PHONY : ransaccer_driver.s
-
-# target to generate assembly for a file
-ransaccer_driver.cpp.s:
-	$(MAKE) -f CMakeFiles/Ransac.dir/build.make CMakeFiles/Ransac.dir/ransaccer_driver.cpp.s
-.PHONY : ransaccer_driver.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -171,12 +171,12 @@ help:
 	@echo "... Ransac"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 	@echo "... ransaccer.o"
 	@echo "... ransaccer.i"
 	@echo "... ransaccer.s"
-	@echo "... ransaccer_driver.o"
-	@echo "... ransaccer_driver.i"
-	@echo "... ransaccer_driver.s"
 .PHONY : help
 
 

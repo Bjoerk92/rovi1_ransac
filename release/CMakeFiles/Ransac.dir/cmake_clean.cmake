@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Ransac.dir/ransaccer_driver.cpp.o"
+  "CMakeFiles/Ransac.dir/main.cpp.o"
   "CMakeFiles/Ransac.dir/ransaccer.cpp.o"
   "Ransac.pdb"
   "Ransac"

@@ -4,5 +4,5 @@
 # compile CXX with /usr/bin/c++
 CXX_FLAGS = -I/usr/include/opencv    -std=gnu++1y
 
-CXX_DEFINES = -DDEBUG
+CXX_DEFINES = 
 

@@ -37,11 +37,13 @@ private:
     vector<DMatch> _good_matches;
     void reset(void);
     void find_marker(void);
+    void find_basic_object(void);
 public:
     Ransac(void);
     void assign(Mat);
     void assign(String);
     Point extract(void);
+    Mat draw_stuff(void);
 
 };
 
